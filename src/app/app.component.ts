@@ -66,15 +66,20 @@ export class AppComponent {
       this.confirmaVoto = true;
       this.votoNulo = false;
 
-    } else if ((this.valueInput1 !== "") && (this.valueInput2 !== "")){
+    } else if ((this.valueInput1 != "") && (this.valueInput2 != "")){
       console.log("Confirmando voto")
       this.confirmaVoto = true;
+      this.valueInput1 = '';
+      this.valueInput2 = '';
+      this.showDiv1 = false;
+      this.showDiv2 = false;
 
     }
     return
   }
 
   putWhiteVote = () => this.votoBranco = true;
+
 
 
 
